@@ -68,6 +68,8 @@ class Student
       
     SQL
     
+    binding.pry 
+    
     array = DB[:conn].execute(sql).map {|row| self.new_from_db(row)}
     
     array[0...num]
